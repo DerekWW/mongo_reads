@@ -1,0 +1,13 @@
+<h2>Edit an author</h2>
+<form class="author-form" action="/authors/{{id}}/edit?_method=PUT" method="post">
+  <label for="first-name">First Name</label>
+  <input type="text" name="first_name" value="{{first_name}}">
+  <br>
+  <label for="last-name">Last Name</label>
+  <input type="text" name="last_name" value="{{last_name}}">
+  <br>
+  <label for="biography">Biography</label>
+  <input type="text" name="biography" value="{{biography}}">
+  <br>
+  <input type="submit" name="" value="SUBMIT">
+</form>

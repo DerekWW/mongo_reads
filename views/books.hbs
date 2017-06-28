@@ -1,0 +1,24 @@
+<h1>BOOKS</h1>
+<h3>Number of Books: {{books.length}}</h3>
+<br />
+<div class="">
+  {{#each books}}
+  <a href="/books/{{id}}"><h3>{{title}}</h3></a>
+  <ul>
+    <li>{{genre}}</li>
+    <h5>Authors:</h5>
+    <ul>
+    {{#each authors}}
+      <a href="/authors/{{id}}"><li>{{first_name}} {{last_name}}</li></a>
+    {{/each}}
+    </ul>
+    <br>
+    <li>{{description}}</li>
+  </ul>
+  <a href="/books/{{id}}/edit">Edit</a>
+  <form class="" action="/books/{{id}}/delete?_method=DELETE" method="POST">
+    <input type="submit" name="delete" value="Delete" />
+  </form>
+  <br />
+  {{/each}}
+</div>
